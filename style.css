@@ -110,13 +110,13 @@ button:disabled {
 
 #zipInput {
   visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #loadZipBtn + #zipInput {
   cursor: pointer;
-}
-
-#loadZipBtn:active + #zipInput {
   display: block;
 }
 
