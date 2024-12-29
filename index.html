@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Half-Life Engine JS</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="logo-container">
+                <img
+                    alt="Half-Life Engine JS Logo"
+                    src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgNjAwIDQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8dGV4dCBzdHlsZT0iZmlsbDogcmdiKDI0MywgMTIzLCAzMyk7IGZvbnQtZmFtaWx5OiBBcmlhbCwgc2Fucy1zZXJpZjsgZm9udC1zaXplOiAxNzIuNXB4OyBmb250LXdlaWdodDogNzAwOyB3aGl0ZS1zcGFjZTogcHJlOyIgeD0iMzI2LjM1NCIgeT0iMjU5Ljg2NiI+SlM8L3RleHQ+CiAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwgMCwgMCwgMSwgMTguMjA0NzEsIDQuMzQyNTA2KSI+CiAgICA8cGF0aCBmaWxsPSIjRjM3QjIxIiBkPSJNIDE4Mi41MDcgMjU5LjM4OSBMIDE1NS4zMjcgMTkwLjUwNiBMIDExNS40OCAyNTMuMjkgTCA5MC40OTggMjUzLjI5IEwgMTQ2LjE0OSAxNjMuNDI0IEwgMTM5LjkwMSAxNDUuNjYzIEwgMTE4LjIzMiAxNDUuNjYzIEwgMTE4LjIzMiAxMjQuNSBMIDE1NS4zMjUgMTI0LjUgTCAxOTcuOTMxIDIzMi44NDIgTCAyMTYuNjYzIDIyNi43NCBMIDIyMi45MDUgMjQ3LjcyOCBMIDE4Mi41MDcgMjU5LjM4OSBaIiBzdHlsZT0iIi8+CiAgICA8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNGMzdCMjEiIHN0cm9rZS13aWR0aD0iMzQiIGQ9Ik0gMjYyLjU5MSAxOTUuNjU3IEMgMjYyLjU5MSAyNTUuOTAzIDIxMy43NjEgMzA0LjcyOCAxNTMuNTIgMzA0LjcyOCBDIDkzLjI4IDMwNC43MjggNDQuNDQ4IDI1NS45MDQgNDQuNDQ4IDE5NS42NTcgQyA0NC40NDggMTM1LjQxOCA5My4yNzggODYuNTg3IDE1My41MiA4Ni41ODcgQyAyMTMuNzYgODYuNTg3IDI2Mi41OTEgMTM1LjQxOCAyNjIuNTkxIDE5NS42NTcgWiIgc3R5bGU9IiIvPgogIDwvZz4KPC9zdmc+"
+                    width="150"
+                />
+            </div>
+            <div class="controls">
+                <button id="startBtn" disabled>Start</button>
+                <button id="fullscreenBtn">Fullscreen</button>
+                <button id="loadZipBtn">Load ZIP</button>
+                <input type="file" id="zipInput" accept=".zip" hidden />
+                <input type="text" id="gamedir" value="valve" placeholder="Enter game directory" />
+                <input type="number" id="width" value="1280" placeholder="Enter screen width" />
+                <input type="number" id="height" value="720" placeholder="Enter screen height" />
+            </div>
+        </header>
+
+        <main>
+            <div class="content">
+                <div class="left-column">
+                    <canvas id="gameCanvas"></canvas>
+                </div>
+                <div class="right-column">
+                    <textarea id="output" rows="10" cols="40" readonly></textarea>
+                </div>
+            </div>
+        </main>
+
+        <script type="text/javascript" src="lib/browserfs.min.js"></script>
+        <script type="module" src="script.js"></script>
+    </body>
+</html>

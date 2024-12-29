@@ -1,0 +1,132 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo-container {
+  flex-shrink: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.controls label {
+  cursor: pointer;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.controls label:hover {
+  background-color: #0056b3;
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+}
+
+.left-column {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-column {
+  flex-shrink: 0;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+canvas {
+  display: block;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+textarea {
+  resize: none;
+  overflow-y: scroll;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #00BC78;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #01A57E3;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+#loadZipBtn {
+  background-color: #FF5729;
+}
+
+#loadZipBtn:hover {
+  background-color: #F44336;
+}
+
+#zipInput {
+  visibility: hidden;
+}
+
+#loadZipBtn + #zipInput {
+  cursor: pointer;
+}
+
+#loadZipBtn:active + #zipInput {
+  display: block;
+}
+
+#gamedir, #width, #height {
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #CCCC;
+  border-radius: 4px;
+}
+
+.hidden {
+  display: none;
+}
